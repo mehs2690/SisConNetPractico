@@ -17,6 +17,10 @@
         /// <summary>
         /// Dado de baja
         /// </summary>
-        D = 3
+        D = 3,
+        /// <summary>
+        /// Cerrado / Solucionado
+        /// </summary>
+        C = 4
     }
 }

@@ -48,12 +48,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Core\AbsCrud.cs" />
     <Compile Include="Data\Core\Crud\ICreate.cs" />
     <Compile Include="Data\Core\Crud\IDelete.cs" />
     <Compile Include="Data\Core\Crud\IRead.cs" />
+    <Compile Include="Data\Core\Crud\IReadAllWithFilter.cs" />
     <Compile Include="Data\Core\Crud\IUpdate.cs" />
+    <Compile Include="Data\Core\Enums\EnmEntitiesName.cs" />
     <Compile Include="Data\Core\Enums\EnmEstatusEntity.cs" />
+    <Compile Include="Data\Interfaces\ApplicationCrud\ICreateApplication.cs" />
+    <Compile Include="Data\Interfaces\ApplicationCrud\IDeleteApplication.cs" />
+    <Compile Include="Data\Interfaces\ApplicationCrud\IReadApplication.cs" />
+    <Compile Include="Data\Interfaces\ApplicationCrud\IUpdateApplication.cs" />
+    <Compile Include="Data\Interfaces\BugCrud\ICreateBug.cs" />
+    <Compile Include="Data\Interfaces\BugCrud\IDeleteBug.cs" />
+    <Compile Include="Data\Interfaces\BugCrud\IReadBug.cs" />
+    <Compile Include="Data\Interfaces\BugCrud\IReadFilterBug.cs" />
+    <Compile Include="Data\Interfaces\BugCrud\IUpdateBug.cs" />
+    <Compile Include="Data\Interfaces\MenuCrud\ICreateMenu.cs" />
+    <Compile Include="Data\Interfaces\MenuCrud\IDeleteMenu.cs" />
+    <Compile Include="Data\Interfaces\MenuCrud\IReadMenu.cs" />
+    <Compile Include="Data\Interfaces\MenuCrud\IUpdateMenu.cs" />
+    <Compile Include="Data\Interfaces\NotificationCrud\ICreateNotification.cs" />
+    <Compile Include="Data\Interfaces\NotificationCrud\IReadNotification.cs" />
+    <Compile Include="Data\Interfaces\ProfileCrud\ICreateProfile.cs" />
+    <Compile Include="Data\Interfaces\ProfileCrud\IDeleteProfile.cs" />
+    <Compile Include="Data\Interfaces\ProfileCrud\IReadProfile.cs" />
+    <Compile Include="Data\Interfaces\ProfileCrud\IUpdateProfile.cs" />
+    <Compile Include="Data\Interfaces\UserCatalogCrud\ICreateUserCatalog.cs" />
+    <Compile Include="Data\Interfaces\UserCatalogCrud\IDeleteUserCatalog.cs" />
+    <Compile Include="Data\Interfaces\UserCatalogCrud\IReadUserCatalog.cs" />
+    <Compile Include="Data\Interfaces\UserCatalogCrud\IUpdateUserCatalog.cs" />
     <Compile Include="Data\Interfaces\UserCrud\ICreateUser.cs" />
+    <Compile Include="Data\Interfaces\UserCrud\IDeleteUser.cs" />
+    <Compile Include="Data\Interfaces\UserCrud\IReadUser.cs" />
+    <Compile Include="Data\Interfaces\UserCrud\IUpdateUser.cs" />
+    <Compile Include="Dtos\Applications\DtoApplication.cs" />
+    <Compile Include="Dtos\Bugs\DtoBug.cs" />
+    <Compile Include="Dtos\Menu\DtoMenu.cs" />
+    <Compile Include="Dtos\Notifications\DtoBugNotification.cs" />
+    <Compile Include="Dtos\Profiles\DtoProfile.cs" />
+    <Compile Include="Dtos\Searchs\DtoSearch.cs" />
+    <Compile Include="Dtos\UserCatalog\DtoUserCatalog.cs" />
     <Compile Include="Dtos\Users\DtoUser.cs" />
     <Compile Include="Exceptions\Data\Users\UserDataMainException.cs" />
     <Compile Include="Exceptions\Security\GenerateTokenException.cs" />
@@ -65,6 +101,14 @@
     <Compile Include="Exceptions\Security\ProcessTripleDESException.cs" />
     <Compile Include="Exceptions\Security\ValidateTokenException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Core\IRepositoryRestApi.cs" />
+    <Compile Include="Rules\Interfaces\RulesApplication\IRepositoryApplication.cs" />
+    <Compile Include="Rules\Interfaces\RulesBug\IRepositoryBug.cs" />
+    <Compile Include="Rules\Interfaces\RulesMenu\IRepositoryMenu.cs" />
+    <Compile Include="Rules\Interfaces\RulesNotifications\IRepositoryNotification.cs" />
+    <Compile Include="Rules\Interfaces\RulesProfile\IRepositoryProfile.cs" />
+    <Compile Include="Rules\Interfaces\RulesUserCatalog\IRepositoryUserCatalog.cs" />
+    <Compile Include="Rules\Interfaces\RulesUser\IRepositoryUser.cs" />
     <Compile Include="Security\Core\AGenerateToken.cs" />
     <Compile Include="Security\Core\ProcessDES.cs" />
     <Compile Include="Security\Core\ProcessHexaDecimal.cs" />
@@ -80,12 +124,7 @@
     <Compile Include="Services\Restful\IRestfulService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dtos\Applications\" />
-    <Folder Include="Dtos\Profiles\" />
-    <Folder Include="Dtos\Searchs\" />
     <Folder Include="Exceptions\Rules\" />
-    <Folder Include="Rules\Core\" />
-    <Folder Include="Rules\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

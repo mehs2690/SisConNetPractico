@@ -60,6 +60,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,11 +70,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implements\Bugs\ImplCreateBug.cs" />
+    <Compile Include="Implements\Bugs\ImplDeleteBug.cs" />
+    <Compile Include="Implements\Bugs\ImplReadBug.cs" />
+    <Compile Include="Implements\Bugs\ImplUpdateBug.cs" />
+    <Compile Include="Orm\BugDataContext.cs" />
+    <Compile Include="Pocos\BugNotificationPoco.cs" />
+    <Compile Include="Pocos\BugPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implements\Notifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
+      <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>
+      <Name>01MehsCoreCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
