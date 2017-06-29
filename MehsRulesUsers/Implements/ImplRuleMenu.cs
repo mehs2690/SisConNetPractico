@@ -21,14 +21,14 @@ namespace MehsRulesUsers.Implements
             set { delete = value; }
         }
 
-        [Dependency("UdpateMenu")]
+        [Dependency("UpdateMenu")]
         public IUpdateMenu Update
         {
             get { return update; }
             set { update = value; }
         }
 
-        [Dependency("FitlerMenu")]
+        [Dependency("FilterMenu")]
         public IReadFilterMenu Filter
         {
             get { return filter; }

@@ -43,6 +43,19 @@ namespace MehsWebApiUsers.Controllers
             }
         }
 
+        [Route("{by}")]
+        public IHttpActionResult Patch(string by)
+        {
+            try
+            {
+                return Ok(repository.ReadAll(by));
+            }
+            catch (Exception e)
+            {
+                throw GenerateHttpException(e, "Error user get", "read by usertype");
+            }
+        }
+
         [Route("{id}")]
         public IHttpActionResult Get(int id)
         {
@@ -59,7 +72,7 @@ namespace MehsWebApiUsers.Controllers
         [Route("")]
         public IHttpActionResult Options()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         [Route("")]

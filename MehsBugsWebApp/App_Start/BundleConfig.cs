@@ -39,8 +39,8 @@ namespace MehsBugsWebApp
                       "~/Scripts/string-builder.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/mehs").Include(
-                    "~/Scripts/mehs-model.js",
-                     "~/Scripts/mehs-core.js"));
+                     "~/Scripts/mehs-core.js",
+                     "~/Scripts/mehs-model.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/tipuesearch").Include(
                     "~/Scripts/tipuesearch*"
