@@ -4,10 +4,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/bundles/homeCss")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/mehs")
+    @Scripts.Render("~/bundles/toastr")
+
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div id="wrapper">
+        <div class="overlay"></div>
+        @Html.Partial("_BannerMenu")
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div id="modulo" class="container">
+                @RenderBody()
+            </div>
+        </div>
+        @Html.Partial("_Modal")
     </div>
 </body>
 </html>

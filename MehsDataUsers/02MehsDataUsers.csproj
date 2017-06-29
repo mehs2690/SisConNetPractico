@@ -93,9 +93,27 @@
     <Compile Include="Implements\UserCatalog\ImplUpdateUserCatalog.cs" />
     <Compile Include="Implements\User\ImplCreateUser.cs" />
     <Compile Include="Implements\User\ImplDeleteUser.cs" />
+    <Compile Include="Implements\User\ImplLoginUser.cs" />
     <Compile Include="Implements\User\ImplReadFilterUser.cs" />
     <Compile Include="Implements\User\ImplReadUser.cs" />
     <Compile Include="Implements\User\ImplUpdateUser.cs" />
+    <Compile Include="Migrations\201706290511168_init.cs" />
+    <Compile Include="Migrations\201706290511168_init.Designer.cs">
+      <DependentUpon>201706290511168_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706290728467_relationship.cs" />
+    <Compile Include="Migrations\201706290728467_relationship.Designer.cs">
+      <DependentUpon>201706290728467_relationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706290744169_RelationshipNew.cs" />
+    <Compile Include="Migrations\201706290744169_RelationshipNew.Designer.cs">
+      <DependentUpon>201706290744169_RelationshipNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706290745229_AddUserTypeRefMenu.cs" />
+    <Compile Include="Migrations\201706290745229_AddUserTypeRefMenu.Designer.cs">
+      <DependentUpon>201706290745229_AddUserTypeRefMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Orm\UserDataContext.cs" />
     <Compile Include="Pocos\ApplicationPoco.cs" />
     <Compile Include="Pocos\MenuPoco.cs" />
@@ -116,6 +134,20 @@
       <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>
       <Name>01MehsCoreCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706290511168_init.resx">
+      <DependentUpon>201706290511168_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706290728467_relationship.resx">
+      <DependentUpon>201706290728467_relationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706290744169_RelationshipNew.resx">
+      <DependentUpon>201706290744169_RelationshipNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706290745229_AddUserTypeRefMenu.resx">
+      <DependentUpon>201706290745229_AddUserTypeRefMenu.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

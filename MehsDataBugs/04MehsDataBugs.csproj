@@ -78,6 +78,11 @@
     <Compile Include="Implements\Notifications\ImplCreateNotification.cs" />
     <Compile Include="Implements\Notifications\ImplFilterNotification.cs" />
     <Compile Include="Implements\Notifications\ImplReadNotification.cs" />
+    <Compile Include="Migrations\201706290515122_init.cs" />
+    <Compile Include="Migrations\201706290515122_init.Designer.cs">
+      <DependentUpon>201706290515122_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Orm\BugDataContext.cs" />
     <Compile Include="Pocos\BugNotificationPoco.cs" />
     <Compile Include="Pocos\BugPoco.cs" />
@@ -90,7 +95,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706290515122_init.resx">
+      <DependentUpon>201706290515122_init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
       <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>

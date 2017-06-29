@@ -184,6 +184,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\mehs-core.js" />
     <Content Include="Scripts\mehs-menu.js" />
+    <Content Include="Scripts\mehs-model.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\string-builder.js" />
     <Content Include="Scripts\tipuesearch.js" />
@@ -195,12 +196,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\IoCConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\AllowAnonymous.cs" />
+    <Compile Include="Attributes\MehsAuthorize.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Managers\MehsPrincipal.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\ModLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\MehsMembershipProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -216,6 +225,10 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\shared\_BannerMenu.cshtml" />
     <Content Include="Views\shared\_Modal.cshtml" />
+    <Content Include="Settings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Default\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,7 +238,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
+      <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>
+      <Name>01MehsCoreCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MehsDataUsers\02MehsDataUsers.csproj">
+      <Project>{4B96186B-0104-4A3D-870A-11F7DC365055}</Project>
+      <Name>02MehsDataUsers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.en-US.resx" />
+    <EmbeddedResource Include="Resources\Labels.es-MX.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

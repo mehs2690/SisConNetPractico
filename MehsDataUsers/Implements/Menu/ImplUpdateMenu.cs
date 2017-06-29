@@ -30,6 +30,7 @@ namespace MehsDataUsers.Implements.Menu
             poco.Order = dto.Order;
             poco.ParentRefId = dto.ParentId;
             poco.StyleClass = dto.StyleClass;
+            poco.UserTypeRefId = dto.UserTypeRefId;
         }
 
         private DtoMenu UpdateMenu(DtoMenu dto)

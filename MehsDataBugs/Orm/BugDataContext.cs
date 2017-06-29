@@ -6,7 +6,7 @@ namespace MehsDataBugs.Orm
 {
     public class BugDataContext : DbContext
     {
-        public BugDataContext() : base(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["OriginData"].ToString()].ToString())
+        public BugDataContext() : base(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["OriginDataBugs"].ToString()].ToString())
         {
 
         }

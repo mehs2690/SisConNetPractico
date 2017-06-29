@@ -6,7 +6,7 @@ namespace MehsDataUsers.Orm
 {
     public class UserDataContext : DbContext
     {
-        public UserDataContext() : base(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["OriginData"].ToString()].ToString())
+        public UserDataContext() : base(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["OriginDataUser"].ToString()].ToString())
         {
 
         }

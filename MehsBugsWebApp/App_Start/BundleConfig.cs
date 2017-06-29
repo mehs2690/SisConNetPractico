@@ -38,10 +38,11 @@ namespace MehsBugsWebApp
                       "~/Scripts/fader.min.js",
                       "~/Scripts/string-builder.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/agmp").Include(
+            bundles.Add(new ScriptBundle("~/bundles/mehs").Include(
+                    "~/Scripts/mehs-model.js",
                      "~/Scripts/mehs-core.js"));
 
-            bundles.Add(new ScriptBundle("~/bundle/tipuesearch").Include(
+            bundles.Add(new ScriptBundle("~/bundles/tipuesearch").Include(
                     "~/Scripts/tipuesearch*"
                 ));
             bundles.Add(new ScriptBundle("~/bundles/menu").Include(
@@ -66,6 +67,8 @@ namespace MehsBugsWebApp
             bundles.Add(new StyleBundle("~/bundles/homeCss").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/font-awesome.css",
+                "~/Content/toastr.css",
+                "~/Content/fader.min.css",
                 "~/Content/home-style.css"
                 ));
         }

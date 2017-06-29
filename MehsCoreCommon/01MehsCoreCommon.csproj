@@ -110,12 +110,14 @@
     <Compile Include="Rules\Core\IRepositoryRestApi.cs" />
     <Compile Include="Rules\Interfaces\RulesApplication\IRepositoryApplication.cs" />
     <Compile Include="Rules\Interfaces\RulesBug\IRepositoryBug.cs" />
+    <Compile Include="Rules\Interfaces\RulesMenu\IBuildHtmlMenu.cs" />
     <Compile Include="Rules\Interfaces\RulesMenu\IRepositoryMenu.cs" />
     <Compile Include="Rules\Interfaces\RulesNotifications\IRepositoryNotification.cs" />
     <Compile Include="Rules\Interfaces\RulesProfile\IRepositoryProfile.cs" />
     <Compile Include="Rules\Interfaces\RulesUserCatalog\IRepositoryUserCatalog.cs" />
     <Compile Include="Rules\Interfaces\RulesUser\IRepositoryUser.cs" />
     <Compile Include="Security\Core\AGenerateToken.cs" />
+    <Compile Include="Security\Core\ILoginUser.cs" />
     <Compile Include="Security\Core\ProcessDES.cs" />
     <Compile Include="Security\Core\ProcessHexaDecimal.cs" />
     <Compile Include="Security\Core\ProcessMd5.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Security\Models\ModValidateRqstToken.cs" />
     <Compile Include="Security\Models\ModValidateRspnsToken.cs" />
     <Compile Include="Serialization\AJsonString.cs" />
+    <Compile Include="Serialization\BuildMenuHtml.cs" />
     <Compile Include="Serialization\Trasnforms\GetPropsFromString.cs" />
     <Compile Include="Serialization\Trasnforms\TransformModelToModel.cs" />
     <Compile Include="Services\Restful\IRestfulService.cs" />

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\ImplRuleApplication.cs" />
+    <Compile Include="Implements\ImplRuleBuildHtmlMenu.cs" />
     <Compile Include="Implements\ImplRuleMenu.cs" />
     <Compile Include="Implements\ImplRuleUser.cs" />
     <Compile Include="Implements\ImplRuleUserCatalog.cs" />

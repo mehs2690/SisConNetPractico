@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MehsDataBugs.Pocos
 {
@@ -16,7 +12,7 @@ namespace MehsDataBugs.Pocos
         public byte[] Image { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
-        
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         public DateTime BugRegistredDate { get; set; }
@@ -31,7 +27,8 @@ namespace MehsDataBugs.Pocos
 
         public BugPoco()
         {
-
+            Id = Guid.NewGuid();
+            BugRegistredDate = DateTime.Now;
         }
     }
 }

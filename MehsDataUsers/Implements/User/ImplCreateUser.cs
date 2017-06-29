@@ -5,6 +5,7 @@ using MehsCoreCommon.Dtos.Users;
 using MehsDataUsers.Orm;
 using MehsDataUsers.Pocos;
 using System;
+using System.Linq;
 
 namespace MehsDataUsers.Implements.User
 {
@@ -43,6 +44,10 @@ namespace MehsDataUsers.Implements.User
         private DtoUser CreateUser(DtoUser dto)
         {
             UserPoco poco = Cast(dto);
+            var usertype = (from ut in contexto.UserTypes
+                            where ut.Description.Equals(dto.Type)
+                            select ut).SingleOrDefault();
+            poco.Types.Add(usertype);
             contexto.Users.Add(poco);
             contexto.SaveChanges();
             return CastInverse(poco);

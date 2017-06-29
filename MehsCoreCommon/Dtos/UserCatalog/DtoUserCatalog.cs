@@ -13,7 +13,7 @@ namespace MehsCoreCommon.Dtos.UserCatalog
 
         public DtoUserCatalog()
         {
-
+            CreateDate = DateTime.Now;
         }
 
         protected override string SerializeJsonString()

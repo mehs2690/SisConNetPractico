@@ -16,6 +16,7 @@ namespace MehsCoreCommon.Dtos.Menu
         public string ImageUrl { get; set; }
         public string Alt { get; set; }
         public int? ParentId { get; set; }
+        public int? UserTypeRefId { get; set; }
 
         public DtoMenu()
         {

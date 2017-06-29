@@ -21,7 +21,8 @@ namespace MehsDataUsers.Pocos
 
         public ProfilePoco()
         {
-
+            Id = Guid.NewGuid();
+            CreateDate = DateTime.Now;
         }
     }
 }

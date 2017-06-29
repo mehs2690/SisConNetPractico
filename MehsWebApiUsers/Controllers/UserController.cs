@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace MehsWebApiUsers.Controllers
 {
-    [RoutePrefix("api/v1/usr/menu")]
+    [RoutePrefix("api/v1/usr/user")]
     public class UserController : UserMainController, IRestfulService<DtoUser, Guid, IHttpActionResult>
     {
         private IRepositoryUser repository;

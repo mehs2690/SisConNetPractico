@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MehsDataUsers.Pocos
@@ -20,13 +22,18 @@ namespace MehsDataUsers.Pocos
         public string Alt { get; set; }
 
         public int? ParentRefId { get; set; }
+        public int? UserTypeRefId { get; set; }
 
         [ForeignKey("ParentRefId")]
         public virtual MenuPoco Parent { get; set; }
+        [ForeignKey("UserTypeRefId")]
+        public virtual UserCatalogPoco User { get; set; }
+
+        public virtual ICollection<MenuPoco> Childrens { get; set; }
 
         public MenuPoco()
         {
-
+            Childrens = new List<MenuPoco>();
         }
     }
 }

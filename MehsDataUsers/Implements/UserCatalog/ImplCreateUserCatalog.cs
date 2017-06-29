@@ -13,7 +13,7 @@ namespace MehsDataUsers.Implements.UserCatalog
         private static readonly ILog log = LogManager.GetLogger(typeof(ImplCreateUserCatalog));
 
         public ImplCreateUserCatalog()
-        {
+        {        
 
         }
 

@@ -47,7 +47,18 @@ namespace MehsDataUsers.Implements.Menu
             List<DtoMenu> result = new List<DtoMenu>();
             if (!string.IsNullOrEmpty(by))
             {
+                string o = by;
+                int iduser = (from ut in contexto.UserTypes
+                              where ut.Description.Equals(o)
+                              select ut.Id).SingleOrDefault();
 
+                var bd = (from m in contexto.Options
+                          where m.UserTypeRefId == iduser
+                          select m).ToList();
+                foreach (var m in bd)
+                {
+                    result.Add(CastInverse(m));
+                }
             }
             else
             {
