@@ -7,5 +7,6 @@
         IResponse Post(Dto dto);
         IResponse Put(Dto dto);
         IResponse Delete(Identity id);
+        IResponse Options();
     }
 }

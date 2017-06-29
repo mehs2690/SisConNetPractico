@@ -73,7 +73,11 @@
     <Compile Include="Implements\Bugs\ImplCreateBug.cs" />
     <Compile Include="Implements\Bugs\ImplDeleteBug.cs" />
     <Compile Include="Implements\Bugs\ImplReadBug.cs" />
+    <Compile Include="Implements\Bugs\ImplReadFilterBug.cs" />
     <Compile Include="Implements\Bugs\ImplUpdateBug.cs" />
+    <Compile Include="Implements\Notifications\ImplCreateNotification.cs" />
+    <Compile Include="Implements\Notifications\ImplFilterNotification.cs" />
+    <Compile Include="Implements\Notifications\ImplReadNotification.cs" />
     <Compile Include="Orm\BugDataContext.cs" />
     <Compile Include="Pocos\BugNotificationPoco.cs" />
     <Compile Include="Pocos\BugPoco.cs" />
@@ -82,10 +86,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Settings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implements\Notifications\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
       <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>

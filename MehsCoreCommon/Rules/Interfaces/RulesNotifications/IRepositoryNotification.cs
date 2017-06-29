@@ -1,9 +1,11 @@
-﻿namespace MehsCoreCommon.Rules.Interfaces.RulesNotifications
+﻿using System.Collections.Generic;
+
+namespace MehsCoreCommon.Rules.Interfaces.RulesNotifications
 {
     public interface IRepositoryNotification<Dto, Identity>
     {
-        Dto ReadAll(Identity id);
-        Dto Create(Dto dto);
-        Dto Read(Identity id);
+        List<Dto> ReadAll(string by);
+        Dto CreateRecord(Dto dto);
+        Dto ReadRecord(Identity id);
     }
 }

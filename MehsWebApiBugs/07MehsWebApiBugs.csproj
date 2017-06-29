@@ -127,11 +127,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BugIoCConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BugController.cs" />
+    <Compile Include="Controllers\BugMainController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,8 +157,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
+      <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>
+      <Name>01MehsCoreCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MehsDataBugs\04MehsDataBugs.csproj">
+      <Project>{0DBA54F4-DA72-46FE-9F78-668D6018FA48}</Project>
+      <Name>04MehsDataBugs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MehsRulesBugs\05MehsRulesBugs.csproj">
+      <Project>{EA66F0F7-F9B9-45BD-A37D-716DD4D720D7}</Project>
+      <Name>05MehsRulesBugs</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

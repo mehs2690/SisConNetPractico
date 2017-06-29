@@ -2,9 +2,9 @@
 using MehsCoreCommon.Dtos.Menu;
 using System;
 
-namespace FcCommonCore.Data.Interfaces.MenuCrud
+namespace MehsCoreCommon.Data.Interfaces.MenuCrud
 {
-    public interface IReadMenu : IRead<DtoMenu, Guid>
+    public interface IReadMenu : IRead<DtoMenu, int>
     {
     }
 }

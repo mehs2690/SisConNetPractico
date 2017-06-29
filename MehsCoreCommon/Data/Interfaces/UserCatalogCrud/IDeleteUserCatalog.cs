@@ -4,7 +4,7 @@ using System;
 
 namespace MehsCoreCommon.Data.Interfaces.UserCatalogCrud
 {
-    public interface IDeleteUserCatalog : IDelete<DtoUserCatalog, Guid>
+    public interface IDeleteUserCatalog : IDelete<DtoUserCatalog, int>
     {
     }
 }

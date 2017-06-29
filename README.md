@@ -15,3 +15,32 @@
   * Se debe poder emitir un reporte con los datos que se están consultando en el momento.
   * El departamento de desarrollo podrá cerrar el caso como resuelto.
   * Una vez que los usuarios ingresen al sistema, se les informará de sus casos cerrados.
+
+# Consideraciones funcionales:
+  * Debe de existir un catálogo de usuarios con los siguientes perfiles:
+    * Usuario
+    * Desarrollador
+    * Administrador.
+  * De acuerdo al usuario firmado en el sistema, se habilitarán las funciones que puede realizar.
+  * El sistema debe implementar regionalización, mínimo en lenguaje español e inglés
+  * Se debe poder elegir de mínimo 2 temas visuales para configurar el look and feel de la aplicación. Dichos valores deben ser recordados por la apliación, según el usuario que las seleccione.
+  * Realizar las validaciones pertinentes.
+
+# Consideraciones Técnicas
+  * Implementar interfases
+  * implementar ajax
+  * la base de datos de usuarios y bugs deben ser bases de datos diferentes
+  * la información del tema y el idioma deben ser persistidos mediante profiles
+  * la información de los usuarios del sistema debe ser consumida de un web service
+  * manejar grupos de validación
+  * implementar recursos
+  * la validación de usuarios debe ser mediante Membership provider
+  * Los menús deben configurar de acuerdo al perfil del usuario firmado.
+
+**Plataforma:** .NET
+**Lenguaje:** Indistinto
+**Base de Datos:** Sql Server 2000 (stored procedures)
+**Arquitectura:** SOA / 3 capas
+**Informes:** Crystal Reports
+
+  * Contemplar las validaciones necesarias

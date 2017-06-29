@@ -58,8 +58,10 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,16 +71,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implements\Application\ImplCreateApplication.cs" />
+    <Compile Include="Implements\Application\ImplDeleteApplication.cs" />
+    <Compile Include="Implements\Application\ImplReadApplication.cs" />
+    <Compile Include="Implements\Application\ImplReadFilterApplication.cs" />
+    <Compile Include="Implements\Application\ImplUpdateApplication.cs" />
+    <Compile Include="Implements\Menu\ImplCreateMenu.cs" />
+    <Compile Include="Implements\Menu\ImplDeleteMenu.cs" />
+    <Compile Include="Implements\Menu\ImplReadFilterMenu.cs" />
+    <Compile Include="Implements\Menu\ImplReadMenu.cs" />
+    <Compile Include="Implements\Menu\ImplUpdateMenu.cs" />
+    <Compile Include="Implements\Profile\ImplCreateProfile.cs" />
+    <Compile Include="Implements\Profile\ImplDeleteProfile.cs" />
+    <Compile Include="Implements\Profile\ImplReadFilterProfile.cs" />
+    <Compile Include="Implements\Profile\ImplReadProfile.cs" />
+    <Compile Include="Implements\Profile\ImplUpdateProfile.cs" />
+    <Compile Include="Implements\UserCatalog\ImplCreateUserCatalog.cs" />
+    <Compile Include="Implements\UserCatalog\ImplDeleteUserCatalog.cs" />
+    <Compile Include="Implements\UserCatalog\ImplReadFilterUserCatalog.cs" />
+    <Compile Include="Implements\UserCatalog\ImplReadUserCatalog.cs" />
+    <Compile Include="Implements\UserCatalog\ImplUpdateUserCatalog.cs" />
+    <Compile Include="Implements\User\ImplCreateUser.cs" />
+    <Compile Include="Implements\User\ImplDeleteUser.cs" />
+    <Compile Include="Implements\User\ImplReadFilterUser.cs" />
+    <Compile Include="Implements\User\ImplReadUser.cs" />
+    <Compile Include="Implements\User\ImplUpdateUser.cs" />
+    <Compile Include="Orm\UserDataContext.cs" />
+    <Compile Include="Pocos\ApplicationPoco.cs" />
+    <Compile Include="Pocos\MenuPoco.cs" />
+    <Compile Include="Pocos\ProfilePoco.cs" />
+    <Compile Include="Pocos\UserCatalogPoco.cs" />
+    <Compile Include="Pocos\UserPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Settings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implements\" />
-    <Folder Include="Orm\" />
-    <Folder Include="Pocos\" />
+    <ProjectReference Include="..\MehsCoreCommon\01MehsCoreCommon.csproj">
+      <Project>{9C74D5A1-A4D5-4364-9CCA-8CDD6222F087}</Project>
+      <Name>01MehsCoreCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
